@@ -1,0 +1,13 @@
+.span {
+  color: $second-color;
+  font-size: 18px;
+}
+.icon-phon {
+  top: 50px;
+  position: absolute;
+  right: 0px;
+  display: flex;
+  z-index: 1;
+  max-width: 400px;
+  height: auto;
+}

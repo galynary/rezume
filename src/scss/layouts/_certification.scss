@@ -1,0 +1,23 @@
+@media screen and (min-width: 320px) {
+  .certifations__content {
+    @include flex(flex, column, null, center, 30px);
+  }
+  .certifation {
+    flex: 1 1 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .certifations__content {
+    flex-direction: row;
+  }
+  .certifation {
+    flex: 1 1 48%;
+  }
+  .certifations__img {
+    box-shadow: 2px 0px 10px 2px rgb(61, 189, 171, 0.6);
+  }
+}
+@media screen and (min-width: 920px) {
+}
+@media screen and (min-width: 1200px) {
+}

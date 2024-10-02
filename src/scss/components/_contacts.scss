@@ -1,0 +1,51 @@
+@media screen and (min-width: 320px) {
+  .contacts__lists {
+    @include flex(flex, column, null, start, 20px);
+  }
+  .contacts__lists {
+  }
+  .contacts__item {
+    flex: 1 1 100%;
+    min-width: 150px;
+  }
+  .contacts__link {
+    display: flex;
+    align-items: center;
+    color: $gray-color;
+    padding-top: 15px;
+    cursor: pointer;
+    transition: color $transion;
+  }
+  .contacts__link:hover {
+    color: $second-color;
+  }
+  .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 10px;
+    border: 1px solid $second-color;
+    box-shadow: 4px 4px 90px 1px #147f6f;
+  }
+  .icon-circle:hover {
+    background-color: rgb(18, 175, 152, 0.5);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__lists {
+    flex-direction: row;
+  }
+  .item {
+    flex: 1 1 48%; /* два елементи на рядок */
+    min-width: 150px;
+  }
+}
