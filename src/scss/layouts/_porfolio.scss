@@ -1,9 +1,18 @@
+.portfolio__list {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 .portfolio__text {
   color: $white-color;
 }
 .portfolio__name {
-  color: $accent-color;
+  color: $second-color;
 }
 .portfolio__link {
+  color: $accent-color;
+}
+.portfolio__inner {
   color: $gray-color;
 }

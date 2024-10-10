@@ -7,8 +7,13 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #494545;
-
+  background: linear-gradient(to top, #071a17, #0c443b);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
   color: #212121;
   line-height: 1.5;
   padding: 0;
@@ -19,6 +24,7 @@ a {
 }
 h1,
 h2,
+h3,
 p {
   margin: 0;
 }
@@ -40,6 +46,7 @@ img {
   }
   .section__container-profile {
     padding-top: 20px;
+    display: inline-block;
   }
   .text {
     color: $white-color;

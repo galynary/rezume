@@ -5,6 +5,94 @@
   background-position: center;
   position: absolute;
   top: 0px;
-  width: 100%;
+  width: 100vw;
+  z-index: 1;
+}
+.page__hero {
+  display: block;
+  background: linear-gradient(to top, #071a17, #0c443b);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
+}
+.wrap-ball-container {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+}
+.ball-container {
+  display: flex;
+  gap: 50px;
+  perspective: 1000px;
+  justify-content: center;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #0d211e;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid $second-color;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  animation: changeBgColor 10s ease-in-out infinite;
+}
+
+.ball__span {
+  position: absolute;
+  backface-visibility: hidden;
+  color: #fff;
+}
+
+@keyframes changeBgColor {
+  0%,
+  100% {
+    color: #14443d;
+    border: 1px solid #082823;
+    opacity: 0;
+    background-color: #0d211e;
+  }
+  50% {
+    color: #fff; /* Колір тексту під час анімації */
+    border: 1px solid $second-color; /* Стиль рамки під час анімації */
+    background-color: #0e2c27; /* Фон під час анімації */
+    opacity: 1;
+  }
+}
+
+.ball:nth-child(1) {
+  animation-delay: 1s; /* Затримка для 1-го елемента */
+}
+
+.ball:nth-child(2) {
+  animation-delay: 1.5s; /* Затримка для 2-го елемента */
+}
+
+.ball:nth-child(3) {
+  animation-delay: 2s; /* Затримка для 3-го елемента */
+}
+
+.ball:nth-child(4) {
+  animation-delay: 3s; /* Затримка для 4-го елемента */
+}
+
+.ball:nth-child(5) {
+  animation-delay: 3.5s; /* Затримка для 5-го елемента */
+}
+
+.ball:nth-child(6) {
+  animation-delay: 4s; /* Затримка для 6-го елемента */
 }

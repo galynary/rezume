@@ -51,7 +51,13 @@ body {
   font-family: "Segoe UI", "Roboto", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #494545;
+  background: -webkit-gradient(linear, left bottom, left top, from(#071a17), to(#0c443b));
+  background: linear-gradient(to top, #071a17, #0c443b);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  width: 100%;
   color: #212121;
   line-height: 1.5;
   padding: 0;
@@ -85,12 +91,13 @@ img {
 @media screen and (min-width: 320px) {
   .section__profile {
     padding-top: 60px;
+    position: relative;
   }
   .section__container-profile {
     padding-top: 20px;
   }
   .text {
-    color: #cbc7c7;
+    color: #fff;
     font-size: 16px;
     font-weight: 400;
   }
@@ -145,6 +152,25 @@ img {
   .hero__container {
     position: relative;
   }
+  .section__hero {
+    padding: 100px 0px 100px 0px;
+  }
+  .wrap__img {
+    /* background-image: url('../image/Я.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+    position: absolute;
+    max-width: 60%;
+    display: block;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+  }
+  .img__hero {
+    right: 0px;
+  }
   .hero__title-name {
     font-size: 16px;
     color: #e5ca15;
@@ -184,7 +210,7 @@ img {
   }
 }
 .portfolio__text {
-  color: #cbc7c7;
+  color: #fff;
 }
 
 .portfolio__name {
@@ -235,6 +261,18 @@ img {
 .span {
   color: #12af98;
   font-size: 18px;
+}
+
+.icon-phon {
+  top: 50px;
+  position: absolute;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  max-width: 400px;
+  height: auto;
 }
 
 @media screen and (min-width: 320px) {
@@ -289,6 +327,8 @@ img {
     background-color: transparent;
     margin-right: 10px;
     border: 1px solid #12af98;
+    -webkit-box-shadow: 4px 4px 90px 1px #147f6f;
+            box-shadow: 4px 4px 90px 1px #147f6f;
   }
   .icon-circle:hover {
     background-color: rgba(18, 175, 152, 0.5);
@@ -344,6 +384,107 @@ img {
   top: 0px;
   width: 100%;
   z-index: -1;
+}
+
+.wrap-ball-container {
+  padding-top: 100px;
+}
+
+.ball-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #0d211e;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #14443d;
+  border: 1px solid #0c443b;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  -webkit-animation: changeBgColor 8s ease-in-out infinite;
+          animation: changeBgColor 8s ease-in-out infinite;
+}
+
+.ball span {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@-webkit-keyframes changeBgColor {
+  0%, 100% {
+    color: #14443d;
+    border: 1px solid #082823;
+    background-color: #0d211e;
+  }
+  50% {
+    color: #fff; /* Колір тексту під час анімації */
+    border: 1px solid #12af98; /* Стиль рамки під час анімації */
+    background-color: #0f7162; /* Фон під час анімації */
+  }
+}
+
+@keyframes changeBgColor {
+  0%, 100% {
+    color: #14443d;
+    border: 1px solid #082823;
+    background-color: #0d211e;
+  }
+  50% {
+    color: #fff; /* Колір тексту під час анімації */
+    border: 1px solid #12af98; /* Стиль рамки під час анімації */
+    background-color: #0f7162; /* Фон під час анімації */
+  }
+}
+.ball:nth-child(1) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; /* Затримка для 1-го елемента */
+}
+
+.ball:nth-child(2) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s; /* Затримка для 2-го елемента */
+}
+
+.ball:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; /* Затримка для 3-го елемента */
+}
+
+.ball:nth-child(4) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; /* Затримка для 4-го елемента */
+}
+
+.ball:nth-child(5) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s; /* Затримка для 5-го елемента */
+}
+
+.ball:nth-child(6) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s; /* Затримка для 6-го елемента */
 }
 
 .section {

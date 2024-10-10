@@ -1,4 +1,9 @@
 @media screen and (min-width: 320px) {
+  .header {
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+  }
   .header__nav {
     padding: 15px;
   }
