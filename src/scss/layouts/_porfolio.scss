@@ -1,3 +1,14 @@
+.section__portfolio {
+  position: relative;
+  background-image: url('../image/kod3.png');
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2; /* Це зробить фон напівпрозорим */
+}
+.portfolio__description {
+  position: relative;
+}
 .portfolio__list {
   padding-top: 50px;
   display: flex;
