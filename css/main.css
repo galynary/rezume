@@ -32,12 +32,12 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    gap: 15px;
+    gap: 25px;
   }
   .header__link {
     font-size: 14px;
     letter-spacing: 0.03em;
-    color: #e9e3e3;
+    color: #e5ca15;
   }
   .header__link::after {
     content: "";
@@ -167,16 +167,17 @@ img {
     max-width: 100%;
   }
   .wrap__img {
-    /* background-image: url('../image/Я.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
+    max-width: 100%;
     position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .img__hero-1200 {
+    display: block;
+  }
+  .img__hero-768,
+  .img__hero-920 {
     display: none;
-    bottom: 0px;
-    right: 0px;
-    z-index: -1;
   }
   .img__hero {
     right: 0px;
@@ -185,8 +186,8 @@ img {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(7, 26, 23, 0.5)), to(rgba(12, 68, 59, 0.02))) center no-repeat;
-    background: linear-gradient(to top, rgba(7, 26, 23, 0.5), rgba(12, 68, 59, 0.02)) center no-repeat;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(7, 26, 23, 0.7)), to(rgba(12, 68, 59, 0.02))) center no-repeat;
+    background: linear-gradient(to top, rgba(7, 26, 23, 0.7), rgba(12, 68, 59, 0.02)) center no-repeat;
     top: 0px;
   }
   .hero__title-name {
@@ -225,9 +226,10 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
-  .wrap__img {
-    max-width: 70%;
+  .img__hero {
     display: block;
+    width: 100%;
+    height: auto;
   }
   .img__hero-768 {
     display: block;
@@ -244,9 +246,6 @@ img {
   }
 }
 @media screen and (min-width: 920px) {
-  .wrap__img {
-    max-width: 60%;
-  }
   .img__hero-920 {
     display: block;
   }
@@ -256,11 +255,6 @@ img {
   }
   .hero__title-profetion {
     font-size: 60px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .wrap__img {
-    max-width: 55%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -281,23 +275,39 @@ img {
     font-size: 18px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
   .wrap__img {
-    max-width: 45%;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .wrap__img {
-    max-width: 40%;
+    max-width: 50%;
   }
 }
 .section__portfolio {
   position: relative;
+}
+
+.section__portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("../image/kod3.png");
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.2; /* Це зробить фон напівпрозорим */
+  opacity: 0.15;
+}
+
+.page__portfolio {
+  background: -webkit-gradient(linear, left bottom, left top, from(#071a17), to(#0c443b));
+  background: linear-gradient(to top, #071a17, #0c443b);
+  position: relative;
+}
+
+.section__portfolio-overlay {
+  top: 0px;
+  position: absolute;
+  background: #071a17;
 }
 
 .portfolio__description {
@@ -383,7 +393,7 @@ img {
   display: flex;
   max-width: 800px;
   height: auto;
-  opacity: 0.15;
+  opacity: 0.2;
 }
 
 .img__phon {
@@ -405,17 +415,7 @@ img {
 
 @media screen and (min-width: 320px) {
   .contacts__lists {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    gap: 20px;
+    display: block;
   }
   .contacts__item {
     -webkit-box-flex: 1;
@@ -455,8 +455,8 @@ img {
     background-color: transparent;
     margin-right: 10px;
     border: 1px solid #12af98;
-    -webkit-box-shadow: 4px 4px 90px 1px #147f6f;
-            box-shadow: 4px 4px 90px 1px #147f6f;
+    -webkit-box-shadow: 4px 2px 100px 1px #147f6f;
+            box-shadow: 4px 2px 100px 1px #147f6f;
   }
   .icon-circle:hover {
     background-color: rgba(18, 175, 152, 0.5);
@@ -466,18 +466,35 @@ img {
     height: 20px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 540px) {
   .contacts__lists {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 48%;
-            flex: 1 1 48%; /* два елементи на рядок */
-    min-width: 150px;
+  .contacts__item {
+    -ms-flex-preferred-size: calc(50% - 15px);
+        flex-basis: calc(50% - 15px);
+  }
+}
+.item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 48%;
+          flex: 1 1 48%; /* два елементи на рядок */
+  min-width: 150px;
+}
+
+@media screen and (min-width: 920px) {
+  .contacts__lists {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 20px;
+  }
+  .contacts__item {
+    -ms-flex-preferred-size: calc(50% - 15px);
+        flex-basis: calc(50% - 15px);
   }
 }
 @media screen and (min-width: 320px) {
@@ -514,6 +531,15 @@ img {
   z-index: 1;
 }
 
+.page__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .page__hero {
   display: block;
   background: -webkit-gradient(linear, left bottom, left top, from(#071a17), to(#0c443b));
@@ -524,7 +550,6 @@ img {
   top: 0px;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
 }
 
 .wrap-ball-container {

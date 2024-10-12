@@ -8,12 +8,12 @@
     padding: 15px;
   }
   .header__list {
-    @include flex(flex, row, null, end, 15px);
+    @include flex(flex, row, null, end, 25px);
   }
   .header__link {
     font-size: 14px;
     letter-spacing: 0.03em;
-    color: #e9e3e3;
+    color: $premiary-color;
   }
   .header__link::after {
     content: '';

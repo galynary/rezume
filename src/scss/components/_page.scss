@@ -8,6 +8,10 @@
   width: 100vw;
   z-index: 1;
 }
+.page__inner {
+  display: flex;
+  justify-content: space-between;
+}
 .page__hero {
   display: block;
   background: linear-gradient(to top, #071a17, #0c443b);
@@ -17,7 +21,6 @@
   top: 0px;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
 }
 .wrap-ball-container {
   position: absolute;

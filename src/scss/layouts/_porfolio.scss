@@ -1,10 +1,29 @@
 .section__portfolio {
   position: relative;
+}
+
+.section__portfolio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('../image/kod3.png');
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.2; /* Це зробить фон напівпрозорим */
+  opacity: 0.15;
+}
+
+.page__portfolio {
+  background: linear-gradient(to top, #071a17, #0c443b);
+  position: relative;
+}
+.section__portfolio-overlay {
+  top: 0px;
+  position: absolute;
+  background: #071a17;
 }
 .portfolio__description {
   position: relative;
