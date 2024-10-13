@@ -9,8 +9,11 @@
   z-index: 1;
 }
 .page__inner {
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  width: 100vw;
 }
 .page__hero {
   display: block;
