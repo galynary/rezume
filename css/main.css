@@ -227,7 +227,15 @@ img {
     max-width: 60%;
   }
 }
+@media screen and (min-width: 540px) {
+  .wrap__img {
+    max-width: 90%;
+  }
+}
 @media screen and (min-width: 768px) {
+  .wrap__img {
+    max-width: 80%;
+  }
   .img__hero {
     display: block;
     width: 100%;
@@ -250,6 +258,9 @@ img {
 @media screen and (min-width: 920px) {
   .img__hero-920 {
     display: block;
+  }
+  .wrap__img {
+    max-width: 70%;
   }
   .img__hero-768,
   .img__hero-1200 {
