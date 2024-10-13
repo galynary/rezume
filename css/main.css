@@ -541,6 +541,7 @@ img {
   position: absolute;
   top: 0px;
   width: 100vw;
+  height: 100vh;
   z-index: 1;
 }
 
@@ -556,7 +557,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100vw;
+  width: 100%;
 }
 
 .page__hero {
@@ -574,7 +575,6 @@ img {
 .wrap-ball-container {
   position: absolute;
   bottom: 50px;
-  left: 20px;
 }
 
 .ball-container {
