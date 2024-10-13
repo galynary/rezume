@@ -172,10 +172,10 @@ img {
     bottom: 0;
     right: 0;
   }
-  .img__hero-1200 {
+  .img__hero-768 {
     display: block;
   }
-  .img__hero-768,
+  .img__hero-1200,
   .img__hero-920 {
     display: none;
   }
