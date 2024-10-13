@@ -29,9 +29,9 @@
 }
 .ball-container {
   display: flex;
-  gap: 50px;
-  perspective: 1000px;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: start;
 }
 
 .ball {
