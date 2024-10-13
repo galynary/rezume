@@ -567,6 +567,7 @@ img {
   background-position: center;
   position: absolute;
   top: 0px;
+  min-height: 700px;
   width: 100vw;
   height: 100vh;
 }
