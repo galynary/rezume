@@ -66,14 +66,37 @@ img {
     gap: 5px;
     text-align: center;
   }
+  .skill__figma {
+    gap: 50px;
+    display: flex;
+  }
+  .skill__html {
+    gap: 50px;
+    display: flex;
+  }
+  .skill__css {
+    gap: 66px;
+    display: flex;
+  }
+  .skill__js {
+    gap: 30px;
+    display: flex;
+  }
+  .skill__react {
+    gap: 50px;
+    display: flex;
+  }
+  .skill__node {
+    gap: 50px;
+    display: flex;
+  }
   .start {
     fill: #e9e8e3;
     stroke: black;
     stroke-width: 4px;
   }
   .start-node:nth-child(-n + 2),
-  .start-react:nth-child(-n + 2),
-  .start:nth-child(-n + 2) {
+  .start-react:nth-child(-n + 2) {
     fill: #ffcc48;
   }
   .start-js:nth-child(-n + 4) {

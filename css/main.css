@@ -135,14 +135,49 @@ img {
     gap: 5px;
     text-align: center;
   }
+  .skill__figma {
+    gap: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .skill__html {
+    gap: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .skill__css {
+    gap: 66px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .skill__js {
+    gap: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .skill__react {
+    gap: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .skill__node {
+    gap: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .start {
     fill: #e9e8e3;
     stroke: black;
     stroke-width: 4px;
   }
   .start-node:nth-child(-n+2),
-  .start-react:nth-child(-n+2),
-  .start:nth-child(-n+2) {
+  .start-react:nth-child(-n+2) {
     fill: #ffcc48;
   }
   .start-js:nth-child(-n+4) {
@@ -150,6 +185,9 @@ img {
   }
   .start-html,
   .start-css {
+    fill: #ffcc48;
+  }
+  .start-fotoshop:nth-child(-n+4) {
     fill: #ffcc48;
   }
   .start-figma:nth-child(-n+4) {
@@ -420,6 +458,7 @@ img {
   max-width: 800px;
   height: auto;
   opacity: 0.2;
+  z-index: -1;
 }
 
 .img__phon {
