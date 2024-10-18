@@ -58,14 +58,14 @@
 .portfolio__name {
   color: $second-color;
 }
+
 .portfolio__link {
   color: $accent-color;
 }
 .portfolio__link:hover {
   text-decoration: underline;
 }
-.portfolio__link:hover,
-.portfolio__link:focus {
+.portfolio__link:hover {
   color: $premiary-color;
 }
 .portfolio__inner {
