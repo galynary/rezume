@@ -53,6 +53,9 @@ img {
     font-size: 16px;
     font-weight: 400;
   }
+  .profile__span {
+    text-decoration: underline;
+  }
 
   .skills {
     @include flex(flex, column, null, center, 15px);
