@@ -79,15 +79,15 @@ img {
     display: flex;
   }
   .skill__js {
-    gap: 33px;
+    gap: 32px;
     display: flex;
   }
   .skill__react {
-    gap: 55px;
+    gap: 50px;
     display: flex;
   }
   .skill__node {
-    gap: 55px;
+    gap: 48px;
     display: flex;
   }
   .start {
@@ -95,7 +95,10 @@ img {
     stroke: black;
     stroke-width: 4px;
   }
-  .start-node:nth-child(-n + 2),
+
+  .start-node:nth-child(-n + 2) {
+    fill: #ffcc48;
+  }
   .start-react:nth-child(-n + 2) {
     fill: #ffcc48;
   }
